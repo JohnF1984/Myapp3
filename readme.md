@@ -98,7 +98,7 @@ Screenshot of /about
 
 Screenshot of /home
 
-![][image14]
+![][image13]
 
 Screenshot of /adminmenu
 
@@ -161,37 +161,37 @@ Screenshot of /deleteAdds
 
 As referenced above, I have 4 API's. 
 .
-FACILITY:
-GET: /api/Facilities |return a list of breastfeeding locations |
++ FACILITY:
++ GET: /api/Facilities |return a list of breastfeeding locations |
 | 
-POST: /api/Facilities |add a new entry to the list of breastfeeding locations |
++ POST: /api/Facilities |add a new entry to the list of breastfeeding locations |
 |
-DELETE: Facility/api/Facilities/:id |Delete an entry from the list of breastfeeding locations |
++ DELETE: Facility/api/Facilities/:id |Delete an entry from the list of breastfeeding locations |
 |
 
-DETAILS:
-GET: /api/DETAILS |return all data from the drill down information for the breastfeeding locations |
++ DETAILS:
++ GET: /api/DETAILS |return all data from the drill down information for the breastfeeding locations |
 | 
-POST: /api/DETAILS |add data to the drill down information for the breastfeeding locations |
++ POST: /api/DETAILS |add data to the drill down information for the breastfeeding locations |
 |
-PUT: /posts/api/DETAILS/:id | edit data for the drill down information for the breastfeeding locations |
++ PUT: /posts/api/DETAILS/:id | edit data for the drill down information for the breastfeeding locations |
 | 
-DELETE: /posts/api/DETAILS/:id | delete data for the drill down information for the breastfeeding locations |
++ DELETE: /posts/api/DETAILS/:id | delete data for the drill down information for the breastfeeding locations |
 
-POSTS:
-GET: /api/Posts |return a list of babyadventure posts |
++ POSTS:
++ GET: /api/Posts |return a list of babyadventure posts |
 | 
-POST: /api/Posts |add a new babyadventure post |
++ POST: /api/Posts |add a new babyadventure post |
 |
-DELETE: /posts/api/posts/:id | delete a babyadventure post|
-DELETE: /posts/api/posts/:id/comment | delete a comment from a babyadventure post|
++ DELETE: /posts/api/posts/:id | delete a babyadventure post|
++ DELETE: /posts/api/posts/:id/comment | delete a comment from a babyadventure post|
 
-ADDS:
-GET: /api/Adds |return a list of breastfeeding location suggestions |
++ ADDS:
++ GET: /api/Adds |return a list of breastfeeding location suggestions |
 | 
-POST: /api/Adds |add a new entry to the list of breastfeeding location suggestions |
++ POST: /api/Adds |add a new entry to the list of breastfeeding location suggestions |
 |
-DELETE: /Adds/api/Adds/:id | delete a breastfeeding location suggestion |
++ DELETE: /Adds/api/Adds/:id | delete a breastfeeding location suggestion |
 
 
 
@@ -257,7 +257,16 @@ Links:
 + http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_time
 + http://www.w3schools.com/html/html_form_elements.asp 
 + http://www.w3schools.com/cssref/css_colors.asp
-ADD MORE LINKS
++ https://docs.mongodb.org/manual/reference/database-references/
++ https://www.quora.com/What-are-the-ways-to-insert-an-image-path-into-the-MySQL-database-and-save-it-in-the-folder-and-display-the-same-image-in-a-web-page-via-PHP
++ https://kraken.io/docs/integration-url
++ http://stackoverflow.com/questions/6150289/how-to-convert-image-into-base64-string-using-javascript
++ http://stackoverflow.com/questions/15413630/what-is-the-proper-pattern-for-nested-schemas-in-mongoos
++ http://mongoosejs.com/docs/guide.html
++ http://stackoverflow.com/questions/17147821/how-to-make-a-whole-row-in-a-table-clickable-as-a-link
++ http://stackoverflow.com/questions/11922383/access-process-nested-objects-arrays-or-json
++ https://github.com/gwmccull/angular-phonecat-mean/blob/master/app/js/controllers.js
++ https://www.quora.com/How-to-insert-a-nested-JSON-string-into-mongodb
 
 
 
@@ -276,3 +285,12 @@ ADD MORE LINKS
 [image11]: ./image11.png
 [image12]: ./image12.png
 [image13]: ./image13.png
+[image14]: ./image14.png
+[image15]: ./image15.png
+[image16]: ./image16.png
+[image17]: ./image17.png
+[image18]: ./image18.png
+[image19]: ./image19.png
+[image20]: ./image20.png
+[image21]: ./image21.png
+[image22]: ./image22.png
