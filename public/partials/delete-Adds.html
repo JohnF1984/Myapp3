@@ -1,0 +1,52 @@
+<h1>All Breastfeeding Location Suggestions</h1>
+  <div>   
+    <div ng-controller="DeletesuggestionsController" >
+      <table class="table table-bordered">
+        <thead>
+          <th class="location">location</th>
+          <th class="town">town</th>
+          <th class="county">county</th>
+          <th class="username">username</th>
+          <th class="button1" ng-if="posts.length > 0"></th>
+        </thead>
+
+       <tbody ng-repeat="post in Adds" ng-switch="post.state">
+
+         
+
+          <!-- Deleted Mode Template -->
+          <tr class="danger" ng-switch-when="deleted">
+            <td>{{post.location}}</td>
+            <td>{{post.town}}</td>
+            <td>{{post.county}}</td>
+            <td>{{post.username}}</td>
+            <td>
+              <input type="button" class="btn btn-danger" 
+                     ng-click="confirmDelete($index)" 
+                     value="Confirm" />
+            </td>
+            <td>
+              <input type="button" class="btn btn-success" 
+                    ng-click="undoDelete(post)" 
+                    value="Undo"/>
+            </td>
+          </tr>
+
+          <!-- Normal Mode Template -->
+          <tr ng-switch-default>
+            <td>{{post.location}}</td>
+            <td>{{post.town}}</td>
+            <td>{{post.county}}</td>
+            <td>{{post.username}}</td>
+
+            <td>
+              <input type="button" class="btn btn-danger" 
+                      ng-click="deleteAdds(post,$index)" 
+                      value="Delete"/>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>

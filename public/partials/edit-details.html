@@ -1,0 +1,164 @@
+<h1>Location Details</h1>
+  <div>   
+    <div ng-controller="EditDetailsController" >
+      <table class="table table-bordered">
+        <thead>
+          <th class="name">Name</th>
+          <th class="name">Description</th>
+          <th class="name">Directions</th>
+          <th class="name">Opening Hours</th>
+          <th class="name">Parking?</th>
+          <th class="name">Type of Premises</th>
+          <th class="name">website link</th>
+          <th class="name">Playground nearby</th>
+          <th class="name">Shop nearby</th>
+          <th class="name">Petrol nearby</th>
+          <th class="name">Garda nearby</th>
+          <th class="name">Church nearby</th>
+          <th class="name">Private Facilities?</th>
+          <th class="name">Babychanging Facilities?</th>
+          <th class="name">Eating Facilities?</th>
+          <th class="name">Baby Friendly Facilities?</th>
+          <th class="name">Image Path #1?</th>
+          <th class="name">Image Path #1</th>
+          <th class="button1" ></th>
+          <th class="button2" ng-if="posts.length > 0"></th>
+        </thead>
+
+       <tbody ng-repeat="post in posts" ng-switch="post.state">
+
+        <tr ng-switch-when="edit">
+            <td>
+              <input type="text" class="form-control" ng-model="post.name" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.description" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.directionsHow" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.locationOpening" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.locationParking" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.locationtype" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.locationlink" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.nearbyplayground" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.nearbyshop" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.nearbypetrol" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.nearbygarda" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.nearbychurch" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.facilitiesprivate" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.facilitiesbabychanging" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.facilitieseating" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.facilitieshighchair" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.images" />
+            </td>
+            <td>
+              <input type="text" class="form-control" ng-model="post.images1" />
+            </td>
+            <td>
+              <input type="button" class="btn btn-success" 
+                   ng-click="saveDetail(post)" 
+                   value="Save" />
+            </td>
+            <td>
+              <input type="button" class="btn btn-danger" 
+                   ng-click="cancelEdit(post);" 
+                   value="Cancel" />
+            </td>
+          </tr>
+
+          <!-- Deleted Mode Template -->
+          <tr class="danger" ng-switch-when="deleted">
+            <td>{{post.name}}</td>
+            <td>{{post.description}}</td>
+            <td>{{post.directionsHow}}</td>
+            <td>{{post.locationOpening}}</td>
+            <td>{{post.locationParking}}</td>
+            <td>{{post.locationtype}}</td>
+            <td>{{post.locationlink}}</td>
+            <td>{{post.nearbyplayground}}</td>
+            <td>{{post.nearbyshop}}</td>
+            <td>{{post.nearbypetrol}}</td>
+            <td>{{post.nearbygarda}}</td>
+            <td>{{post.nearbychurch}}</td>
+            <td>{{post.facilitiesprivate}}</td>
+            <td>{{post.facilitiesbabychanging}}</td>
+            <td>{{post.facilitieseating}}</td>
+            <td>{{post.facilitieshighchair}}</td>
+            <td>{{post.images}}</td>
+            <td>{{post.images1}}</td>
+            <td>
+              <input type="button" class="btn btn-danger" 
+                     ng-click="confirmDelete($index)" 
+                     value="Confirm" />
+            </td>
+            <td>
+              <input type="button" class="btn btn-success" 
+                    ng-click="undoDelete(post)" 
+                    value="Undo"/>
+            </td>
+          </tr>
+
+          <!-- Normal Mode Template -->
+          <tr ng-switch-default>
+            <td>{{post.name}}</td>
+            <td>{{post.description}}</td>
+            <td>{{post.directionsHow}}</td>
+            <td>{{post.locationOpening}}</td>
+            <td>{{post.locationParking}}</td>
+            <td>{{post.locationtype}}</td>
+            <td>{{post.locationlink}}</td>
+            <td>{{post.nearbyplayground}}</td>
+            <td>{{post.nearbyshop}}</td>
+            <td>{{post.nearbypetrol}}</td>
+            <td>{{post.nearbygarda}}</td>
+            <td>{{post.nearbychurch}}</td>
+            <td>{{post.facilitiesprivate}}</td>
+            <td>{{post.facilitiesbabychanging}}</td>
+            <td>{{post.facilitieseating}}</td>
+            <td>{{post.facilitieshighchair}}</td>
+            <td>{{post.images}}</td>
+            <td>{{post.images1}}</td>
+            <td>
+              <input type="button" class="btn btn-primary" 
+                     ng-click="editDetail(post)" 
+                     value="Edit" />
+            </td>
+            <td>
+              <input type="button" class="btn btn-danger" 
+                      ng-click="deleteDetail(post,$index)" 
+                      value="Delete"/>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>

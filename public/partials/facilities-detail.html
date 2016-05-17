@@ -1,0 +1,72 @@
+ <div class="jumbotron">
+     <div class="row">
+       <div class="col-sm-5">
+         <h1>{{Facility.name}}</h1>
+         <p>{{Facility.description}}</p>
+          <ul class="Facilities-thumbs">
+              <img ng-src="{{Facility.images}}" ng-click="setImage(img)">
+              <img ng-src="{{Facility.images1}}" ng-click="setImage(img)">
+            </li>
+          </ul>
+       </div>
+       <div class="col-sm-2">
+        <img ng-src="{{Facility.images1}}" class="Facilities">
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-sm-6 col-md-4 col-lg-2">
+          <span>Location Information</span>
+          <dl>
+            <dt>Type</dt>
+            <dd>{{Facility.locationtype}}</dd>
+            <dt>Parking on site</dt>
+            <dd>{{Facility.locationParking}}</dd>
+            <dt>Opening Hours</dt>
+            <dd>{{Facility.locationOpening}}</dd>
+            <dt>Link to Website</dt>
+            <dd>{{Facility.locationlink}}</dd>
+          </dl>
+       </div>
+       <div class="col-sm-6 col-md-4 col-lg-2">
+          <span>Facilities</span>
+          <dl>
+            <dt>Private Breastfeeding Area</dt>
+            <dd>{{Facility.facilitiesprivate}}</dd>
+            <dt>Baby Changing Facilities</dt>
+            <dd>{{Facility.facilitiesbabychanging}}</dd>
+            <dt>Baby Friendly Restaurant/Eating Area</dt>
+            <dd>{{Facility.facilitieseating}}</dd>
+            <dt>High Chair Provided</dt>
+            <dd>{{Facility.facilitieshighchair}}</dd>
+          </dl>
+       </div>
+       <div class="col-sm-6 col-md-4 col-lg-2">
+          <span>Directions</span>
+          <dl>
+            <dt>How to get here</dt>
+            <dd>{{Facility.directionsHow}}</dd>
+          </dl>
+       </div>
+       <div class="col-sm-6 col-md-4 col-lg-2">
+          <span>Nearby Facilities and Amenities</span>
+          <dl>
+            <dt>Playground</dt>
+            <dd>{{Facility.nearbyplayground}}</dd>
+            <dt>Shop(s)</dt>
+            <dd>{{Facility.nearbyshop}}</dd>
+            <dt>Petrol Station</dt>
+            <dd>{{Facility.nearbypetrol}}</dd>
+            <dt>GARDA Station</dt>
+            <dd>{{Facility.nearbygarda}}</dd>
+            <dt>Church</dt>
+            <dd>{{Facility.nearbychurch}}</dd>
+          </dl>
+       </div>
+       <div class="col-sm-6 col-md-4 col-lg-2">
+           <span>Want to review this facility?</span>
+           <dl>
+            <dt><a class="btn btn-primary btn-lg" href="./#/posts" role="button">Tell us How you got on &raquo;</a></p></dt>
+          </dl>
+       </div>
+       </div>
+    </div>    

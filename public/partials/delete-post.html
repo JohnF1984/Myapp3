@@ -1,0 +1,61 @@
+<h1>All Baby Adventure Posts</h1>
+  <div>   
+    <div ng-controller="DeletePostsController" >
+      <table class="table table-bordered">
+        <thead>
+          <th class="type" >type</th>
+          <th class="title">title</th>
+          <th class="location">location</th>
+          <th class="town">town</th>
+          <th class="county">county</th>
+          <th class="feedback">feedback</th>
+          <th class="username">username</th>
+          <th class="button1" ng-if="posts.length > 0"></th>
+        </thead>
+
+       <tbody ng-repeat="post in posts" ng-switch="post.state">
+
+         
+
+          <!-- Deleted Mode Template -->
+          <tr class="danger" ng-switch-when="deleted">
+            <td>{{post.type}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.location}}</td>
+            <td>{{post.town}}</td>
+            <td>{{post.county}}</td>
+            <td>{{post.feedback}}</td>
+            <td>{{post.username}}</td>
+            <td>
+              <input type="button" class="btn btn-danger" 
+                     ng-click="confirmDelete($index)" 
+                     value="Confirm" />
+            </td>
+            <td>
+              <input type="button" class="btn btn-success" 
+                    ng-click="undoDelete(post)" 
+                    value="Undo"/>
+            </td>
+          </tr>
+
+          <!-- Normal Mode Template -->
+          <tr ng-switch-default>
+            <td>{{post.type}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.location}}</td>
+            <td>{{post.town}}</td>
+            <td>{{post.county}}</td>
+            <td>{{post.feedback}}</td>
+            <td>{{post.username}}</td>
+
+            <td>
+              <input type="button" class="btn btn-danger" 
+                      ng-click="deletePost(post,$index)" 
+                      value="Delete"/>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>

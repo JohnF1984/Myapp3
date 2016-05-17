@@ -1,0 +1,149 @@
+<div class="col-md-10">
+            <div class="page-header">
+              <h1>Breastfeeding Locations</h1>
+            </div>
+            <form name="postForm" novalidate ng-submit="addDetail()"
+                style="margin-top:30px;">
+                <h4>Add Details to a location</h4>
+
+                
+                   <div class="form-group">
+                  <input type="text" name="_id" 
+                    class="form-control" placeholder="What is the id of the location? (This has to match exactly what set up already)" 
+                    ng-model="newDetail._id" 
+                    ng-required ng-minlength="3" ng-maxlength="100"></input>
+                </div>
+
+                  <div class="form-group">
+                  <input type="text" name="locationOpening" 
+                    class="form-control" placeholder="Opening Hours" 
+                    ng-model="newDetail.locationOpening" 
+                    ng-required ng-minlength="3" ng-maxlength="25"></input>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="locationParking" 
+                    class="form-control" placeholder="Parking Facilities?" 
+                    ng-model="newDetail.locationParking" 
+                    ng-required ng-minlength="3" ng-maxlength="25"></input>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="locationtype" 
+                    class="form-control" placeholder="What type of premises is this?" 
+                    ng-model="newDetail.locationtype" 
+                    ng-required ng-minlength="3" ng-maxlength="25"></input>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="locationlink" 
+                    class="form-control" placeholder="Link to the website" 
+                    ng-model="newDetail.locationlink" 
+                    ng-required ng-minlength="3" ng-maxlength="25"></input>
+                </div>
+
+                 <div class="form-group">
+                  <input type="text" name="directionsHow" 
+                    class="form-control" placeholder="Directions to get here" 
+                    ng-model="newDetail.directionsHow" 
+                    ng-required ng-minlength="3" ng-maxlength="150"></input>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="description" 
+                    class="form-control" placeholder="Give a Description of the Location" 
+                    ng-model="newDetail.description" 
+                    ng-required ng-minlength="3" ng-maxlength="100"></input>
+                </div>
+
+                
+                <div class="form-group">
+                  <input type="text" name="nearbyplayground" 
+                    class="form-control" placeholder="Is there a playground nearby?" 
+                    ng-model="newDetail.nearbyplayground" 
+                    ng-required ng-minlength="3" ng-maxlength="25"></input>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="nearbyshop" 
+                    class="form-control" placeholder="Is there a shop(s) nearby?" 
+                    ng-model="newDetail.nearbyshop" 
+                    ng-required ng-minlength="3" ng-maxlength="25"></input>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="nearbypetrol" 
+                    class="form-control" placeholder="Is there a petrol station (services) nearby?" 
+                    ng-model="newDetail.nearbypetrol" 
+                    ng-required ng-minlength="3" ng-maxlength="25"></input>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="nearbygarda" 
+                    class="form-control" placeholder="Is there a Garda Station nearby?" 
+                    ng-model="newDetail.nearbygarda" 
+                    ng-required ng-minlength="3" ng-maxlength="25"></input>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="nearbychurch" 
+                    class="form-control" placeholder="Is there a Church nearby?" 
+                    ng-model="newDetail.nearbychurch" 
+                    ng-required ng-minlength="3" ng-maxlength="25"></input>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="images" 
+                    class="form-control" placeholder="path of image of facilities" 
+                    ng-model="newDetail.images" 
+                    ng-required ng-minlength="3" ng-maxlength="100"></input>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="images1" 
+                    class="form-control" placeholder="path of image of premises" 
+                    ng-model="newDetail.images1" 
+                    ng-required ng-minlength="3" ng-maxlength="100"></input>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="name" 
+                    class="form-control" placeholder="What is the Name of the Location" 
+                    ng-model="newDetail.name" 
+                    ng-required ng-minlength="3" ng-maxlength="100"></input>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="facilitiesprivate" 
+                    class="form-control" placeholder="Are the Breastfeeding facilities Private?" 
+                    ng-model="newDetail.facilitiesprivate" 
+                    ng-required ng-minlength="3" ng-maxlength="25"></input>
+                </div>
+
+                  <div class="form-group">
+                  <input type="text" name="facilitiesbabychanging" 
+                    class="form-control" placeholder="Are there Babychanging facilities also?" 
+                    ng-model="newDetail.facilitiesbabychanging" 
+                    ng-required ng-minlength="3" ng-maxlength="25"></input>
+                </div>
+
+                  <div class="form-group">
+                  <input type="text" name="facilitieseating" 
+                    class="form-control" placeholder="Are there Eating facilities (restaurant etc)?" 
+                    ng-model="newDetail.facilitieseating" 
+                    ng-required ng-minlength="3" ng-maxlength="25"></input>
+                </div>
+
+                  <div class="form-group">
+                  <input type="text" name="facilitieshighchair" 
+                    class="form-control" placeholder="Are the child/baby friendly facilities here?" 
+                    ng-model="newDetail.facilitieshighchair" 
+                    ng-required ng-minlength="3" ng-maxlength="25"></input>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary"
+                    ng-disabled="postForm.$pristine || (postForm.$dirty && postForm.$invalid) ">
+                Post</button>
+              </form> 
+             

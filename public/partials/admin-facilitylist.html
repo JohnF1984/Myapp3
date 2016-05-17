@@ -1,0 +1,25 @@
+ <div>
+ <table class="table table-bordered">
+        <thead>
+          <th class="name" >Name</th>
+          <th class="details">Details</th>
+        </thead>
+
+ <tbody ng-repeat="Facility in Facilities">
+
+<td><a ng-show="Facility.name != null">
+                        {{Facility.name}}
+                     </a></td>
+            <td><a ng-show="Facility.Details != null" href="/#/facilities/{{Facility._id}}/adddetails">Details</a></td>
+
+
+
+                     <span class="main-text ">
+                     <a ng-show="Facility.name != null">
+                        {{Facility.name}}
+                     </a>       
+
+                 </tbody>
+
+      </table>
+    </div>
